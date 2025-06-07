@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio profissional de Victor Didoff - Desenvolvedor Back-end, Engenharia de Software, Golang, Segurança Cibernética">
+    <meta name="keywords" content="Victor Didoff, Desenvolvedor, Golang, Back-end, Engenharia de Software, Segurança Cibernética, API REST, Desenvolvedor Full Stack">
+    <title>Victor Didoff | Desenvolvedor Back-end</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-dark-900 text-light-100 font-inter">
+    <!-- Header com navegação -->
+    <header class="fixed w-full bg-dark-800 bg-opacity-90 backdrop-blur-sm z-50 border-b border-dark-600">
+        <!-- Mobile Navigation -->
+        <div class="md:hidden">
+            <div class="flex items-center justify-between px-4 py-3">
+                <a href="#" class="text-2xl font-poppins font-bold text-lime-green">Victor<span class="text-light-100">.dev</span></a>
+                <button id="menu-toggle" class="text-light-100 focus:outline-none">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+            <nav id="mobile-menu" class="hidden bg-dark-700 px-4 py-4">
+                <ul class="space-y-4">
+                    <li><a href="#hero" class="nav-link active block py-2">Início</a></li>
+                    <li><a href="#sobre" class="nav-link block py-2">Sobre</a></li>
+                    <li><a href="#competencias" class="nav-link block py-2">Competências</a></li>
+                    <li><a href="#experiencia" class="nav-link block py-2">Experiência</a></li>
+                    <li><a href="#projetos" class="nav-link block py-2">Projetos</a></li>
+                    <li><a href="#formacao" class="nav-link block py-2">Formação</a></li>
+                    <li><a href="#contato" class="nav-link block py-2">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:block">
+            <div class="container-custom">
+                <div class="flex items-center justify-between py-4">
+                    <a href="#" class="text-2xl font-poppins font-bold text-lime-green">Victor<span class="text-light-100">.dev</span></a>
+                    <nav>
+                        <ul class="flex space-x-8">
+                            <li><a href="#hero" class="nav-link active">Início</a></li>
+                            <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                            <li><a href="#competencias" class="nav-link">Competências</a></li>
+                            <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+                            <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                            <li><a href="#formacao" class="nav-link">Formação</a></li>
+                            <li><a href="#contato" class="nav-link">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-dark-900 to-dark-800">
+        <div class="container-custom">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="w-full lg:w-2/3 animate-on-scroll">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                        <span class="text-lime-green">Victor Didoff</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-light mb-6">Desenvolvedor Back-end | Engenharia de Software</h2>
+                    <p class="text-xl text-light-300 mb-8 max-w-2xl">
+                        Especializado em desenvolvimento back-end com Golang, segurança cibernética e integrações de sistemas.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contato" class="btn btn-primary">Entre em contato</a>
+                        <a href="assets/Curriculo_Victor_Didoff_Reformulado.pdf" download class="btn btn-outline flex items-center">
+                            <span class="material-icons mr-2">download</span> Baixar CV
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/3 mt-12 lg:mt-0 flex justify-center animate-on-scroll">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-lime-green rounded-full opacity-10 blur-xl"></div>
+                        <div class="relative bg-dark-700 p-8 rounded-xl border border-dark-600">
+                            <div class="flex items-center space-x-4 mb-6">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="font-mono text-sm">
+                                <div class="text-light-300">// Desenvolvedor Back-end</div>
+                                <div class="mt-2">
+                                    <span class="text-blue-400">const</span> <span class="text-lime-green">developer</span> <span class="text-blue-400">=</span> {
+                                </div>
+                                <div class="ml-4">
+                                    <span class="text-purple-400">name:</span> <span class="text-orange-300">'Victor Didoff'</span>,
+                                </div>
+                                <div class="ml-4">
+                                    <span class="text-purple-400">skills:</span> [<span class="text-orange-300">'Golang'</span>, <span class="text-orange-300">'APIs'</span>, <span class="text-orange-300">'Segurança'</span>],
+                                </div>
+                                <div class="ml-4">
+                                    <span class="text-purple-400">location:</span> <span class="text-orange-300">'São Paulo, Brasil'</span>
+                                </div>
+                                <div>};</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="section bg-dark-800">
+        <div class="container-custom">
+            <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Sobre <span class="text-lime-green">Mim</span></h2>
+                <div class="w-20 h-1 bg-lime-green mx-auto mb-8"></div>
+            </div>
+            
+            <div class="bg-dark-700 rounded-xl p-8 border border-dark-600 animate-on-scroll">
+                <p class="text-lg mb-6 leading-relaxed">
+                    Estudante de Engenharia de Software na FIAP, com foco em desenvolvimento back-end, segurança
+                    cibernética e integrações de sistemas. Atuo como desenvolvedor em Golang em ambiente real, com
+                    experiência em APIs REST, modelagem de dados, e comunicação entre sistemas CMS, DSPs e SSPs.
+                </p>
+                <p class="text-lg mb-6 leading-relaxed">
+                    Possuo familiaridade com ambientes Linux, versionamento com Git, metodologias ágeis (Scrum) e princípios
+                    de Clean Code.
+                </p>
+                <p class="text-lg mb-6 leading-relaxed">
+                    Tenho interesse genuíno por arquitetura de software, infraestrutura escalável, DevOps e análise forense de
+                    sistemas. Forte capacidade de aprendizagem autodidata, raciocínio lógico, e espírito colaborativo são
+                    minhas principais marcas. Busco constantemente aplicar soluções robustas, seguras e eficientes com foco
+                    em entrega de valor.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Habilidades interpessoais incluem comunicação assertiva, resolução de problemas, adaptação a novos
+                    contextos e foco em resultados. Aberto a desafios técnicos, com perfil proativo e analítico. Em busca de
+                    oportunidades que permitam crescer como engenheiro de software contribuindo com times de alta
+                    performance.
+                </p>
+                
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-center">
+                        <span class="material-icons text-lime-green mr-3">location_on</span>
+                        <span>São Paulo, SP</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="material-icons text-lime-green mr-3">email</span>
+                        <a href="mailto:victor.didoff2003@gmail.com" class="hover:text-lime-green transition-colors">victor.didoff2003@gmail.com</a>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="material-icons text-lime-green mr-3">phone</span>
+                        <a href="tel:+5511985557790" class="hover:text-lime-green transition-colors">(11) 98555-7790</a>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="material-icons text-lime-green mr-3">language</span>
+                        <div>
+                            <span class="mr-2">Português (Fluente)</span>
+                            <span class="mr-2">Inglês (Avançado)</span>
+                            <span>Espanhol (Básico)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a href="http://linkedin.com/in/victor-didoff-32979b226/" target="_blank" class="btn btn-outline flex items-center">
+                        <span class="material-icons mr-2">link</span> LinkedIn
+                    </a>
+                    <a href="http://github.com/SgT012003" target="_blank" class="btn btn-outline flex items-center">
+                        <span class="material-icons mr-2">code</span> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competências Section -->
+    <section id="competencias" class="section bg-dark-900">
+        <div class="container-custom">
+            <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Competências <span class="text-lime-green">Técnicas</span></h2>
+                <div class="w-20 h-1 bg-lime-green mx-auto mb-8"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Linguagens e Stacks -->
+                <div class="card animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <span class="material-icons text-lime-green text-3xl mr-4">code</span>
+                        <h3 class="text-xl font-bold">Linguagens e Stacks</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Golang (intermediário)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            C#, .NET
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Java
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            HTML5, CSS
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Lua, SQL
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            JavaScript, C, Ruby
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Ferramentas -->
+                <div class="card animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <span class="material-icons text-lime-green text-3xl mr-4">build</span>
+                        <h3 class="text-xl font-bold">Ferramentas</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Git
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            REST APIs
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Agile/Scrum
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            SAP
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            CMS
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            DSP/SSP
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Ambientes -->
+                <div class="card animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <span class="material-icons text-lime-green text-3xl mr-4">computer</span>
+                        <h3 class="text-xl font-bold">Ambientes</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Linux (intermediário)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Windows (avançado)
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Cibersegurança -->
+                <div class="card animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <span class="material-icons text-lime-green text-3xl mr-4">security</span>
+                        <h3 class="text-xl font-bold">Cibersegurança</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Análise forense
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Pentest
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            LGPD
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Phishing, exploits
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Edição e Design -->
+                <div class="card animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <span class="material-icons text-lime-green text-3xl mr-4">brush</span>
+                        <h3 class="text-xl font-bold">Edição e Design</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Photoshop
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Illustrator
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Premiere (intermediário)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Blender, Maya (básico)
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="card animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <span class="material-icons text-lime-green text-3xl mr-4">psychology</span>
+                        <h3 class="text-xl font-bold">Soft Skills</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Comunicação assertiva
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Resolução de problemas
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Adaptabilidade
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Foco em resultados
+                        </li>
+                        <li class="flex items-center">
+                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
+                            Aprendizagem autodidata
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiência Section -->
+    <section id="experiencia" class="section bg-dark-800">
+        <div class="container-custom">
+            <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Experiência <span class="text-lime-green">Profissional</span></h2>
+                <div class="w-20 h-1 bg-lime-green mx-auto mb-8"></div>
+            </div>
+            
+            <div class="relative">
+                <!-- Linha do tempo vertical -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-dark-600"></div>
+                
+                <!-- Nirooh -->
+                <div class="relative mb-16 md:mb-24 animate-on-scroll">
+                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 -mt-2 w-5 h-5 rounded-full border-4 border-lime-green bg-dark-800"></div>
+                    <div class="md:w-5/12 md:ml-auto md:pl-8">
+                        <div class="card">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                                <h3 class="text-xl font-bold text-lime-green">Nirooh</h3>
+                                <span class="bg-dark-600 text-light-200 px-3 py-1 rounded-full text-sm mt-2 md:mt-0">desde 09/2024</span>
+                            </div>
+                            <h4 class="text-lg font-medium mb-4">Desenvolvedor back-end (Golang)</h4>
+                            <p class="text-light-300">
+                                Atuação em integrações entre CMS e DSP/SSP, desenvolvimento de APIs REST e modelagem de dados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Inviron Technologies -->
+                <div class="relative animate-on-scroll">
+                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 -mt-2 w-5 h-5 rounded-full border-4 border-lime-green bg-dark-800"></div>
+                    <div class="md:w-5/12 md:mr-auto md:pr-8">
+                        <div class="card">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                                <h3 class="text-xl font-bold text-lime-green">Inviron Technologies S/A</h3>
+                                <span class="bg-dark-600 text-light-200 px-3 py-1 rounded-full text-sm mt-2 md:mt-0">02/2024 - 09/2024</span>
+                            </div>
+                            <h4 class="text-lg font-medium mb-4">Operações e Help Desk</h4>
+                            <p class="text-light-300">
+                                Atuação nas áreas operacionais e Help Desk com resolução de problemas técnicos e suporte a sistemas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Section -->
+    <section id="projetos" class="section bg-dark-900">
+        <div class="container-custom">
+            <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Projetos <span class="text-lime-green">Relevantes</span></h2>
+                <div class="w-20 h-1 bg-lime-green mx-auto mb-8"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- WeCareU -->
+                <div class="card group hover:border-lime-green transition-all duration-300 animate-on-scroll">
+                    <div class="bg-dark-600 rounded-lg h-48 mb-6 flex items-center justify-center overflow-hidden">
+                        <span class="material-icons text-lime-green text-6xl">calendar_month</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-lime-green transition-colors">WeCareU</h3>
+                    <p class="text-light-300 mb-4">
+                        Sistema de agendamento com autenticação e controle de dados pessoais.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">Scrum</span>
+                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">LGPD</span>
+                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">Golang</span>
+                    </div>
+                </div>
+                
+                <!-- Steam ServerGen -->
+                <div class="card group hover:border-lime-green transition-all duration-300 animate-on-scroll">
+                    <div class="bg-dark-600 rounded-lg h-48 mb-6 flex items-center justify-center overflow-hidden">
+                        <span class="material-icons text-lime-green text-6xl">dns</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-lime-green transition-colors">Steam ServerGen</h3>
+                    <p class="text-light-300 mb-4">
+                        Aplicativo para automatização de servidores de jogos para usuários leigos.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">Automação</span>
+                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">Servidores</span>
+                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">UX</span>
+                    </div>
+                </div>
+                
+                <!-- Rede Âncora -->
+                <div class="card group hover:border-lime-green transition-all duration-300 animate-on-scroll">
+                    <div class="bg-dark-600 rounded-lg h-48 mb-6 flex items-center justify-center overflow-hidden">
+                        <span class="material-icons text-lime-green text-6xl">inventory</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-lime-green transition-colors">Rede Âncora</h3>
+                    <p class="text-light-300 mb-4">
+                        Aplicação para gestão de estoque e distribuição logística de peças automotivas.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">Logística</span>
+                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">Gestão</span>
+                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">Estoque</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formação Section -->
+    <section id="formacao" class="section bg-dark-800">
+        <div class="container-custom">
+            <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Formação <span class="text-lime-green">Acadêmica</span></h2>
+                <div class="w-20 h-1 bg-lime-green mx-auto mb-8"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Formação Acadêmica -->
+                <div class="card animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <span class="material-icons text-lime-green text-3xl mr-4">school</span>
+                        <h3 class="text-xl font-bold">Educação Formal</h3>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-lg font-medium mb-2">Engenharia de Software</h4>
+                        <p class="text-light-300 mb-1">FIAP (4º semestre)</p>
+                        <p class="text-light-300">Previsão de Conclusão: Junho/2027</p>
+                        
+                        <div class="mt-4 bg-dark-600 rounded-full h-4 overflow-hidden">
+                            <div class="bg-lime-green h-full" style="width: 40%"></div>
+                        </div>
+                        <div class="flex justify-between mt-1 text-xs text-light-300">
+                            <span>Início</span>
+                            <span>40% Concluído</span>
+                            <span>Conclusão</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificações e Cursos -->
+                <div class="card animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <span class="material-icons text-lime-green text-3xl mr-4">workspace_premium</span>
+                        <h3 class="text-xl font-bold">Certificações e Cursos</h3>
+                    </div>
+                    
+                    <ul class="space-y-4">
+                        <li>
+                            <div class="flex items-start">
+                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
+                                <div>
+                                    <h4 class="font-medium">Cyber Security</h4>
+                                    <p class="text-light-300 text-sm">HackerSec (12 meses)</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start">
+                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
+                                <div>
+                                    <h4 class="font-medium">SAP ERP</h4>
+                                    <p class="text-light-300 text-sm">GACINTY University (8 meses)</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start">
+                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
+                                <div>
+                                    <h4 class="font-medium">Administração de Pequenas e Médias Empresas</h4>
+                                    <p class="text-light-300 text-sm">SENAC</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start">
+                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
+                                <div>
+                                    <h4 class="font-medium">Design Thinking, Gestão em Infraestrutura de TI</h4>
+                                    <p class="text-light-300 text-sm">FIAP</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start">
+                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
+                                <div>
+                                    <h4 class="font-medium">Códigos de Alta Performance</h4>
+                                    <p class="text-light-300 text-sm">FIAP</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start">
+                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
+                                <div>
+                                    <h4 class="font-medium">Desenvolvimento em .NET</h4>
+                                    <p class="text-light-300 text-sm">FIAP</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-start">
+                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
+                                <div>
+                                    <h4 class="font-medium">Formação Social e Sustentabilidade</h4>
+                                    <p class="text-light-300 text-sm">FIAP</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="section bg-dark-900">
+        <div class="container-custom">
+            <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em <span class="text-lime-green">Contato</span></h2>
+                <div class="w-20 h-1 bg-lime-green mx-auto mb-8"></div>
+                <p class="text-lg text-light-300">
+                    Estou disponível para novas oportunidades e colaborações. Entre em contato através dos canais abaixo.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Email -->
+                <a href="mailto:victor.didoff2003@gmail.com" class="card flex flex-col items-center text-center hover:border-lime-green transition-all duration-300 animate-on-scroll">
+                    <span class="material-icons text-lime-green text-4xl mb-4">email</span>
+                    <h3 class="text-xl font-bold mb-2">Email</h3>
+                    <p class="text-light-300">victor.didoff2003@gmail.com</p>
+                </a>
+                
+                <!-- Telefone -->
+                <a href="tel:+5511985557790" class="card flex flex-col items-center text-center hover:border-lime-green transition-all duration-300 animate-on-scroll">
+                    <span class="material-icons text-lime-green text-4xl mb-4">phone</span>
+                    <h3 class="text-xl font-bold mb-2">Telefone</h3>
+                    <p class="text-light-300">(11) 98555-7790</p>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="http://linkedin.com/in/victor-didoff-32979b226/" target="_blank" class="card flex flex-col items-center text-center hover:border-lime-green transition-all duration-300 animate-on-scroll">
+                    <span class="material-icons text-lime-green text-4xl mb-4">link</span>
+                    <h3 class="text-xl font-bold mb-2">LinkedIn</h3>
+                    <p class="text-light-300">linkedin.com/in/victor-didoff-32979b226</p>
+                </a>
+            </div>
+            
+            <div class="text-center animate-on-scroll">
+                <a href="assets/Curriculo_Victor_Didoff_Reformulado.pdf" download class="btn btn-primary inline-flex items-center">
+                    <span class="material-icons mr-2">download</span> Baixar Currículo Completo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-dark-800 border-t border-dark-600">
+        <div class="container-custom">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-xl font-poppins font-bold text-lime-green">Victor<span class="text-light-100">.dev</span></a>
+                </div>
+                <div class="text-light-300 text-sm">
+                    &copy; 2025 Victor Didoff. Todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
