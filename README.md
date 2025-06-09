@@ -52,7 +52,8 @@ O site foi desenvolvido com TailwindCSS, o que facilita a personalização. Para
 
 1. Modifique o arquivo `tailwind.config.js` para ajustar cores, fontes e outros estilos
 2. Edite o arquivo `css/input.css` para adicionar estilos personalizados
-3. Recompile o CSS com o comando: `npx tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify`
+3. Instale os arquivos necessarios utilizando o comando: `npm install .`
+4. Recompile o CSS com o comando: `npm run build:tailwindcss`
 
 ## Manutenção
 
