@@ -1,111 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio profissional de Victor Didoff - Desenvolvedor de Software especializado em .NET, Go e Multi-Stack. Engenharia de Software, APIs RESTful, DevOps">
-    <meta name="keywords" content="Victor Didoff, Desenvolvedor, .NET, C#, Golang, Back-end, Engenharia de Software, API REST, Docker, DevOps, Node.js, React">
+    <meta name="description"
+        content="Portfólio profissional de Victor Didoff - Desenvolvedor de Software especializado em .NET, Go e Multi-Stack. Engenharia de Software, APIs RESTful, DevOps">
+    <meta name="keywords"
+        content="Victor Didoff, Desenvolvedor, .NET, C#, Golang, Back-end, Engenharia de Software, API REST, Docker, DevOps, Node.js, React">
     <title>Victor Didoff | Desenvolvedor</title>
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="images/favicon.png">
-    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="bg-dark-900 text-light-100 font-inter">
-    <!-- Header com navegação -->
-    <header class="fixed w-full bg-dark-800 bg-opacity-90 backdrop-blur-sm z-50 border-b border-dark-600">
-        <!-- Mobile Navigation -->
-        <div class="md:hidden">
-            <div class="flex items-center justify-between px-4 py-3">
-                <a href="#" class="text-2xl font-poppins font-bold text-lime-green">Victor<span class="text-light-100">.dev</span></a>
-                <button id="menu-toggle" class="text-light-100 focus:outline-none">
-                    <span class="material-icons">menu</span>
-                </button>
-            </div>
-            <nav id="mobile-menu" class="hidden bg-dark-700 px-4 py-4">
-                <ul class="space-y-4">
-                    <li><a href="#hero" class="nav-link active block py-2">Início</a></li>
-                    <li><a href="#sobre" class="nav-link block py-2">Sobre</a></li>
-                    <li><a href="#competencias" class="nav-link block py-2">Competências</a></li>
-                    <li><a href="#experiencia" class="nav-link block py-2">Experiência</a></li>
-                    <li><a href="#projetos" class="nav-link block py-2">Projetos</a></li>
-                    <li><a href="#formacao" class="nav-link block py-2">Formação</a></li>
-                    <li><a href="#contato" class="nav-link block py-2">Contato</a></li>
+
+<body>
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Mouse Follower -->
+    <div class="mouse-follower"></div>
+
+    <!-- ======== HEADER ======== -->
+    <header class="glass-header" id="header">
+        <!-- Mobile -->
+        <div class="header__inner header__inner--mobile" style="display:flex;">
+            <a href="#" class="header__logo">
+                <span class="accent">Victor</span><span class="dot">.</span><span>dev</span>
+            </a>
+            <button id="menu-toggle" class="header__mobile-toggle" aria-label="Menu">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+        <nav id="mobile-menu" class="mobile-menu">
+            <ul class="mobile-menu__list">
+                <li><a href="#hero" class="nav-link active">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#competencias" class="nav-link">Competências</a></li>
+                <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#formacao" class="nav-link">Formação</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Desktop -->
+        <div class="header__inner header__inner--desktop">
+            <a href="#" class="header__logo">
+                <span class="accent">Victor</span><span class="dot">.</span><span>dev</span>
+            </a>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="#hero" class="nav-link active">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#competencias" class="nav-link">Competências</a></li>
+                    <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#formacao" class="nav-link">Formação</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
             </nav>
         </div>
-        
-        <!-- Desktop Navigation -->
-        <div class="hidden md:block">
-            <div class="container-custom">
-                <div class="flex items-center justify-between py-4">
-                    <a href="#" class="text-2xl font-poppins font-bold text-lime-green">Victor<span class="text-light-100">.dev</span></a>
-                    <nav>
-                        <ul class="flex space-x-8">
-                            <li><a href="#hero" class="nav-link active">Início</a></li>
-                            <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                            <li><a href="#competencias" class="nav-link">Competências</a></li>
-                            <li><a href="#experiencia" class="nav-link">Experiência</a></li>
-                            <li><a href="#projetos" class="nav-link">Projetos</a></li>
-                            <li><a href="#formacao" class="nav-link">Formação</a></li>
-                            <li><a href="#contato" class="nav-link">Contato</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-dark-900 to-dark-800">
-        <div class="container-custom">
-            <div class="flex flex-col lg:flex-row items-center">
-                <div class="w-full lg:w-2/3 animate-on-scroll">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                        <span class="text-lime-green">Victor Didoff</span>
+    <!-- ======== HERO ======== -->
+    <section id="hero" class="hero section">
+        <!-- Aurora effects -->
+        <div class="aurora-orb aurora-orb--hero-1" data-parallax="0.03"></div>
+        <div class="aurora-orb aurora-orb--hero-2" data-parallax="0.05"></div>
+
+        <div class="container">
+            <div class="hero__grid">
+                <div class="reveal">
+                    <div class="hero__tag">
+                        <span class="dot"></span>
+                        Disponível para oportunidades
+                    </div>
+                    <h1 class="hero__title">
+                        <span class="gradient-text">Victor Didoff</span>
                     </h1>
-                    <h2 class="text-2xl md:text-3xl font-light mb-6">Desenvolvedor de Software | .NET, Go & Multi-Stack</h2>
-                    <p class="text-xl text-light-300 mb-8 max-w-2xl">
-                        Apaixonado por criar soluções de software robustas e eficientes. Especializado no desenvolvimento de APIs com .NET e Go, com experiência em um ambiente multitecnológico, incluindo Node.js, React e Python. Foco em código limpo, arquitetura escalável e automação com DevOps.
+                    <h2 class="hero__subtitle">Desenvolvedor de Software&nbsp;|&nbsp;.NET, Go & Multi-Stack</h2>
+                    <p class="hero__desc">
+                        Apaixonado por criar soluções de software robustas e eficientes. Especializado no
+                        desenvolvimento de APIs com .NET e Go, com experiência em um ambiente multitecnológico,
+                        incluindo Node.js, React e Python. Foco em código limpo, arquitetura escalável e automação com
+                        DevOps.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#contato" class="btn btn-primary">Entre em contato</a>
-                        <a href="assets/Curriculo_Victor_Didoff.pdf" download class="btn btn-outline flex items-center">
-                            <span class="material-icons mr-2">download</span> Baixar CV
+                    <div class="hero__actions">
+                        <a href="#contato" class="btn btn--primary">Entre em contato</a>
+                        <a href="assets/Curriculo_Victor_Didoff.pdf" download class="btn btn--outline">
+                            <span class="material-icons">download</span> Baixar CV
                         </a>
                     </div>
                 </div>
-                <div class="w-full lg:w-1/3 mt-12 lg:mt-0 flex justify-center animate-on-scroll">
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-lime-green rounded-full opacity-10 blur-xl"></div>
-                        <div class="relative bg-dark-700 p-8 rounded-xl border border-dark-600">
-                            <div class="flex items-center space-x-4 mb-6">
-                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+
+                <div class="reveal" style="transition-delay:0.15s;">
+                    <div class="code-card">
+                        <div class="code-card__header">
+                            <span class="code-card__dot code-card__dot--red"></span>
+                            <span class="code-card__dot code-card__dot--yellow"></span>
+                            <span class="code-card__dot code-card__dot--green"></span>
+                        </div>
+                        <div class="code-card__body">
+                            <div class="comment">// Desenvolvedor de Software</div>
+                            <div style="margin-top:0.5rem;">
+                                <span class="keyword">const</span> <span class="variable">developer</span> <span
+                                    class="keyword">=</span> {
                             </div>
-                            <div class="font-mono text-sm">
-                                <div class="text-light-300">// Desenvolvedor de Software</div>
-                                <div class="mt-2">
-                                    <span class="text-blue-400">const</span> <span class="text-lime-green">developer</span> <span class="text-blue-400">=</span> {
-                                </div>
-                                <div class="ml-4">
-                                    <span class="text-purple-400">name:</span> <span class="text-orange-300">'Victor Didoff'</span>,
-                                </div>
-                                <div class="ml-4">
-                                    <span class="text-purple-400">age:</span> <span class="text-blue-500 age">0</span>,
-                                </div>
-                                <div class="ml-4">
-                                    <span class="text-purple-400">skills:</span> [<span class="text-orange-300">'.NET'</span>, <span class="text-orange-300">'Go'</span>, <span class="text-orange-300">'Multi-Stack'</span>],
-                                </div>
-                                <div class="ml-4">
-                                    <span class="text-purple-400">location:</span> <span class="text-orange-300">'Jardim Itapeva, São Paulo - SP'</span>
-                                </div>
-                                <div>};</div>
+                            <div class="indent"><span class="property">name:</span> <span class="string">'Victor
+                                    Didoff'</span>,</div>
+                            <div class="indent"><span class="property">age:</span> <span class="number age">0</span>,
                             </div>
+                            <div class="indent"><span class="property">skills:</span> [<span
+                                    class="string">'.NET'</span>, <span class="string">'Go'</span>, <span
+                                    class="string">'Multi-Stack'</span>],</div>
+                            <div class="indent"><span class="property">location:</span> <span class="string">'São Paulo
+                                    - SP'</span></div>
+                            <div>};</div>
                         </div>
                     </div>
                 </div>
@@ -113,513 +130,475 @@
         </div>
     </section>
 
-    <!-- Sobre Section -->
-    <section id="sobre" class="section bg-dark-800">
-        <div class="container-custom">
-            <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Sobre <span class="text-lime-green">Mim</span></h2>
-                <div class="w-20 h-1 bg-lime-green mx-auto mb-8"></div>
+    <!-- ======== SOBRE ======== -->
+    <section id="sobre" class="section section--alt">
+        <div class="container">
+            <div class="section__header reveal">
+                <h2 class="section__title">Sobre <span class="gradient-text">Mim</span></h2>
+                <div class="section__divider"></div>
             </div>
-            
-            <div class="bg-dark-700 rounded-xl p-8 border border-dark-600 animate-on-scroll">
-                <p class="text-lg mb-6 leading-relaxed">
-                    Olá! Sou Victor Didoff, um estudante de Engenharia de Software na FIAP e um entusiasta da tecnologia que vive e respira código. Minha jornada no mundo do desenvolvimento de software é impulsionada por uma curiosidade insaciável e um desejo de resolver problemas complexos com soluções elegantes e eficientes.
+
+            <div class="about-card reveal">
+                <p>
+                    Olá! Sou Victor Didoff, um estudante de Engenharia de Software na FIAP e um entusiasta da tecnologia
+                    que vive e respira código. Minha jornada no mundo do desenvolvimento de software é impulsionada por
+                    uma curiosidade insaciável e um desejo de resolver problemas complexos com soluções elegantes e
+                    eficientes.
                 </p>
-                <p class="text-lg mb-6 leading-relaxed">
-                    Atualmente, atuo como Desenvolvedor Back-end, onde tenho a oportunidade de trabalhar em um ambiente dinâmico e multitecnológico. No meu dia a dia, mergulho em projetos pessoais e de clientes que utilizam uma vasta gama de tecnologias, incluindo <strong>.NET Core, ASP.NET Core, Node.js (com Nest.js), Python e Go</strong>. Essa diversidade me permite não apenas aprimorar minhas habilidades em diferentes stacks, mas também entender as nuances de cada ecossistema, aplicando a ferramenta certa para cada desafio. Minhas responsabilidades vão desde a correção de bugs e otimização de performance até a implementação de novas features, sempre com foco na qualidade e na entrega de valor.
+                <p>
+                    Atualmente, atuo como Desenvolvedor Back-end, onde tenho a oportunidade de trabalhar em um ambiente
+                    dinâmico e multitecnológico. No meu dia a dia, mergulho em projetos pessoais e de clientes que
+                    utilizam uma vasta gama de tecnologias, incluindo <strong>.NET Core, ASP.NET Core, Node.js (com
+                        Nest.js), Python e Go</strong>. Essa diversidade me permite não apenas aprimorar minhas
+                    habilidades em diferentes stacks, mas também entender as nuances de cada ecossistema, aplicando a
+                    ferramenta certa para cada desafio. Minhas responsabilidades vão desde a correção de bugs e
+                    otimização de performance até a implementação de novas features, sempre com foco na qualidade e na
+                    entrega de valor.
                 </p>
-                <p class="text-lg mb-6 leading-relaxed">
-                    Além da minha experiência profissional, sou um grande defensor do <strong>desenvolvimento assistido por Inteligência Artificial</strong>. Utilizo ferramentas de IA para acelerar o ciclo de desenvolvimento, desde a geração de código boilerplate até a depuração e otimização. Tenho um interesse particular em <strong>Engenharia de Prompts</strong>, buscando extrair o máximo de modelos de linguagem para criar soluções inovadoras e otimizar fluxos de trabalho.
+                <p>
+                    Além da minha experiência profissional, sou um grande defensor do <strong>desenvolvimento assistido
+                        por Inteligência Artificial</strong>. Utilizo ferramentas de IA para acelerar o ciclo de
+                    desenvolvimento, desde a geração de código boilerplate até a depuração e otimização. Tenho um
+                    interesse particular em <strong>Engenharia de Prompts</strong>, buscando extrair o máximo de modelos
+                    de linguagem para criar soluções inovadoras e otimizar fluxos de trabalho.
                 </p>
-                <p class="text-lg leading-relaxed">
-                    Fora do ambiente profissional, dedico meu tempo a projetos pessoais que me permitem explorar novas tecnologias e aprofundar meu conhecimento em áreas como segurança cibernética, onde estudo análise forense e pentesting. Acredito que a combinação de uma base sólida em engenharia de software, uma mentalidade ágil e a constante busca por aprendizado são as chaves para construir uma carreira de sucesso e impacto.
+                <p>
+                    Fora do ambiente profissional, dedico meu tempo a projetos pessoais que me permitem explorar novas
+                    tecnologias e aprofundar meu conhecimento em áreas como segurança cibernética, onde estudo análise
+                    forense e pentesting. Acredito que a combinação de uma base sólida em engenharia de software, uma
+                    mentalidade ágil e a constante busca por aprendizado são as chaves para construir uma carreira de
+                    sucesso e impacto.
                 </p>
-                
-                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="flex items-center">
-                        <span class="material-icons text-lime-green mr-3">location_on</span>
+
+                <div class="about__info-grid">
+                    <div class="about__info-item">
+                        <span class="material-icons">location_on</span>
                         <span>Jardim Itapeva, São Paulo - SP</span>
                     </div>
-                    <div class="flex items-center">
-                        <span class="material-icons text-lime-green mr-3">today</span>
+                    <div class="about__info-item">
+                        <span class="material-icons">today</span>
                         <span><span class="age">0</span> anos</span>
                     </div>
-                    <div class="flex items-center">
-                        <span class="material-icons text-lime-green mr-3">email</span>
-                        <a href="mailto:victor.didoff2003@gmail.com" class="hover:text-lime-green transition-colors">victor.didoff2003@gmail.com</a>
+                    <div class="about__info-item">
+                        <span class="material-icons">email</span>
+                        <a href="mailto:victor.didoff2003@gmail.com">victor.didoff2003@gmail.com</a>
                     </div>
-                    <div class="flex items-center">
-                        <span class="material-icons text-lime-green mr-3">phone</span>
-                        <a href="tel:+5511985557790" class="hover:text-lime-green transition-colors">(11) 98555-7790</a>
+                    <div class="about__info-item">
+                        <span class="material-icons">phone</span>
+                        <a href="tel:+5511985557790">(11) 98555-7790</a>
                     </div>
-                    <div class="flex items-center">
-                        <span class="material-icons text-lime-green mr-3">language</span>
-                        <div>
-                            <span class="mr-2">Português (Fluente)</span>
-                            <span class="mr-2">Inglês (Avançado)</span>
-                            <span>Espanhol (Básico)</span>
-                        </div>
+                    <div class="about__info-item">
+                        <span class="material-icons">language</span>
+                        <div>Português (Fluente) · Inglês (Avançado) · Espanhol (Básico)</div>
                     </div>
                 </div>
-                
-                <div class="mt-10 flex flex-wrap gap-4">
-                    <a href="http://linkedin.com/in/victor-didoff-32979b226/" target="_blank" class="btn btn-outline flex items-center">
-                        <span class="material-icons mr-2">link</span> LinkedIn
+
+                <div class="about__links">
+                    <a href="http://linkedin.com/in/victor-didoff-32979b226/" target="_blank" class="btn btn--outline">
+                        <span class="material-icons">link</span> LinkedIn
                     </a>
-                    <a href="http://github.com/SgT012003" target="_blank" class="btn btn-outline flex items-center">
-                        <span class="material-icons mr-2">code</span> GitHub
+                    <a href="http://github.com/SgT012003" target="_blank" class="btn btn--outline">
+                        <span class="material-icons">code</span> GitHub
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Competências Section -->
-    <section id="competencias" class="section bg-dark-900">
-        <div class="container-custom">
-            <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Competências <span class="text-lime-green">Técnicas</span></h2>
-                <div class="w-20 h-1 bg-lime-green mx-auto mb-8"></div>
+    <!-- ======== COMPETÊNCIAS ======== -->
+    <section id="competencias" class="section">
+        <div class="aurora-orb aurora-orb--mid" data-parallax="0.02"></div>
+        <div class="container">
+            <div class="section__header reveal">
+                <h2 class="section__title">Competências <span class="gradient-text">Técnicas</span></h2>
+                <div class="section__divider"></div>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="grid-3 stagger-children">
                 <!-- Linguagens e Stacks -->
-                <div class="card animate-on-scroll">
-                    <div class="flex items-center mb-6">
-                        <span class="material-icons text-lime-green text-3xl mr-4">code</span>
-                        <h3 class="text-xl font-bold">Linguagens e Stacks</h3>
+                <div class="card reveal">
+                    <div class="card__icon-wrap">
+                        <span class="material-icons">code</span>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            C#, .NET Core 8.0 (avançado)
+                    <h3 class="card__title">Linguagens e Stacks</h3>
+                    <ul class="skill-list">
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>C#, .NET Core 8.0
+                            (avançado)</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>ASP.NET Core
+                            (avançado)</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Golang (avançado)
                         </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            ASP.NET Core (avançado)
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Node.js, Nest.js
                         </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Golang (avançado)
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Python, Flask</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>React, JavaScript
                         </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Node.js, Nest.js
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Python, Flask
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            React, JavaScript
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Java, SQL (avançado)
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Java, SQL (avançado)
                         </li>
                     </ul>
                 </div>
-                
+
                 <!-- Ferramentas -->
-                <div class="card animate-on-scroll">
-                    <div class="flex items-center mb-6">
-                        <span class="material-icons text-lime-green text-3xl mr-4">build</span>
-                        <h3 class="text-xl font-bold">Ferramentas</h3>
+                <div class="card reveal">
+                    <div class="card__icon-wrap">
+                        <span class="material-icons">build</span>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Docker & Docker Compose
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Git & GitHub
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            REST APIs
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Swagger/OpenAPI
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Entity Framework Core
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Agile/Scrum
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            CI/CD
-                        </li>
+                    <h3 class="card__title">Ferramentas</h3>
+                    <ul class="skill-list">
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Docker & Docker
+                            Compose</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Git & GitHub</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>REST APIs</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Swagger/OpenAPI</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Entity Framework
+                            Core</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Agile/Scrum</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>CI/CD</li>
                     </ul>
                 </div>
-                
+
                 <!-- Inteligência Artificial -->
-                <div class="card animate-on-scroll">
-                    <div class="flex items-center mb-6">
-                        <span class="material-icons text-lime-green text-3xl mr-4">smart_toy</span>
-                        <h3 class="text-xl font-bold">Inteligência Artificial</h3>
+                <div class="card reveal">
+                    <div class="card__icon-wrap">
+                        <span class="material-icons">smart_toy</span>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Desenvolvimento Assistido por IA
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Engenharia de Prompts
-                        </li>
+                    <h3 class="card__title">Inteligência Artificial</h3>
+                    <ul class="skill-list">
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Desenvolvimento
+                            Assistido por IA</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Engenharia de
+                            Prompts</li>
                     </ul>
                 </div>
-                
+
                 <!-- Bancos de Dados -->
-                <div class="card animate-on-scroll">
-                    <div class="flex items-center mb-6">
-                        <span class="material-icons text-lime-green text-3xl mr-4">storage</span>
-                        <h3 class="text-xl font-bold">Bancos de Dados</h3>
+                <div class="card reveal">
+                    <div class="card__icon-wrap">
+                        <span class="material-icons">storage</span>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            SQL Server
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            PostgreSQL
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Modelagem de Dados
+                    <h3 class="card__title">Bancos de Dados</h3>
+                    <ul class="skill-list">
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>SQL Server</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>PostgreSQL</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Modelagem de Dados
                         </li>
                     </ul>
                 </div>
-                
+
                 <!-- Cibersegurança -->
-                <div class="card animate-on-scroll">
-                    <div class="flex items-center mb-6">
-                        <span class="material-icons text-lime-green text-3xl mr-4">security</span>
-                        <h3 class="text-xl font-bold">Cibersegurança</h3>
+                <div class="card reveal">
+                    <div class="card__icon-wrap">
+                        <span class="material-icons">security</span>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Análise forense
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Pentest
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            LGPD
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Phishing, exploits
+                    <h3 class="card__title">Cibersegurança</h3>
+                    <ul class="skill-list">
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Análise forense</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Pentest</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>LGPD</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Phishing, exploits
                         </li>
                     </ul>
                 </div>
-                
+
                 <!-- Edição e Design -->
-                <div class="card animate-on-scroll">
-                    <div class="flex items-center mb-6">
-                        <span class="material-icons text-lime-green text-3xl mr-4">brush</span>
-                        <h3 class="text-xl font-bold">Edição e Design</h3>
+                <div class="card reveal">
+                    <div class="card__icon-wrap">
+                        <span class="material-icons">brush</span>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Photoshop
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Illustrator
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Premiere (intermediário)
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Blender, Maya (básico)
-                        </li>
+                    <h3 class="card__title">Edição e Design</h3>
+                    <ul class="skill-list">
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Photoshop</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Illustrator</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Premiere
+                            (intermediário)</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Blender, Maya
+                            (básico)</li>
                     </ul>
                 </div>
-                
+
                 <!-- Soft Skills -->
-                <div class="card animate-on-scroll">
-                    <div class="flex items-center mb-6">
-                        <span class="material-icons text-lime-green text-3xl mr-4">psychology</span>
-                        <h3 class="text-xl font-bold">Soft Skills</h3>
+                <div class="card reveal">
+                    <div class="card__icon-wrap">
+                        <span class="material-icons">psychology</span>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Comunicação assertiva
+                    <h3 class="card__title">Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Comunicação
+                            assertiva</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Resolução de
+                            problemas</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Adaptabilidade</li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Foco em resultados
                         </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Resolução de problemas
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Adaptabilidade
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Foco em resultados
-                        </li>
-                        <li class="flex items-center">
-                            <span class="material-icons text-lime-green mr-2 text-sm">arrow_right</span>
-                            Aprendizagem autodidata
-                        </li>
+                        <li class="skill-list__item"><span class="material-icons">arrow_right</span>Aprendizagem
+                            autodidata</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experiência Section -->
-    <section id="experiencia" class="section bg-dark-800">
-        <div class="container-custom">
-            <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Experiência <span class="text-lime-green">Profissional</span></h2>
-                <div class="w-20 h-1 bg-lime-green mx-auto mb-8"></div>
+    <!-- ======== EXPERIÊNCIA ======== -->
+    <section id="experiencia" class="section section--alt">
+        <div class="container">
+            <div class="section__header reveal">
+                <h2 class="section__title">Experiência <span class="gradient-text">Profissional</span></h2>
+                <div class="section__divider"></div>
             </div>
-            
-            <div class="relative">
-                <!-- Linha do tempo vertical -->
-                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-dark-600"></div>
-                
+
+            <div class="timeline">
+                <!-- PLACEHOLDER — Nova Experiência -->
+                <div class="timeline__item reveal">
+                    <div class="timeline__node"></div>
+                    <div class="timeline__card timeline__card--placeholder">
+                        <div class="timeline__header">
+                            <h3 class="timeline__company gradient-text">Nirooh</h3>
+                            <span class="timeline__period">02/2026 - Presente</span>
+                        </div>
+                        <h4 class="timeline__role">Analista de Desenvolvimento Back-end Junior</h4>
+                        <p class="timeline__desc">
+                            Desenvolvimento de aplicações cross-plataform, com foco em integração entre sistemas de
+                            CMS e a plataforma de POES da empresa.
+                        </p>
+                        <p class="timeline__desc">
+                            Desenvolvimento e manutenção de integrações back-end em Golang entre Content Management
+                            Systems (CMS) e plataformas de publicidade programática (DSPs/SSPs), com foco em APIs REST,
+                            modelagem de dados e comunicação eficiente entre sistemas em ambiente de produção.
+                        </p>
+                        <div class="flex flex-wrap gap-sm" style="margin-top:var(--space-md);">
+                            <span class="tag">IA</span>
+                            <span class="tag">Golang</span>
+                            <span class="tag">APIs REST</span>
+                            <span class="tag">Modelagem de Dados</span>
+                            <span class="tag">Comunicação entre sistemas</span>
+                            <span class="tag">Ambiente de produção</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Nirooh -->
-                <div class="relative mb-16 md:mb-24 animate-on-scroll">
-                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 -mt-2 w-5 h-5 rounded-full border-4 border-lime-green bg-dark-800"></div>
-                    <div class="md:w-5/12 md:ml-auto md:pl-8">
-                        <div class="card">
-                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                                <h3 class="text-xl font-bold text-lime-green">Nirooh</h3>
-                                <span class="bg-dark-600 text-light-200 px-3 py-1 rounded-full text-sm mt-2 md:mt-0">desde 09/2024</span>
-                            </div>
-                            <h4 class="text-lg font-medium mb-4">Estagiário de Desenvolvimento Back-end</h4>
-                            <p class="text-light-300 mb-3">
-                                Atuação em múltiplos projetos de clientes, oferecendo suporte de desenvolvimento, correção de bugs, adaptações e implementação de novas features.
-                            </p>
-                            <p class="text-light-300">
-                                Desenvolvimento e manutenção de integrações back-end em Golang entre Content Management Systems (CMS) e plataformas de publicidade programática (DSPs/SSPs), com foco em APIs REST, modelagem de dados e comunicação eficiente entre sistemas em ambiente de produção.
-                            </p>
+                <div class="timeline__item reveal">
+                    <div class="timeline__node"></div>
+                    <div class="timeline__card">
+                        <div class="timeline__header">
+                            <h3 class="timeline__company gradient-text">Nirooh</h3>
+                            <span class="timeline__period">09/2024 - 02/2026</span>
+                        </div>
+                        <h4 class="timeline__role">Estagiário de Desenvolvimento Back-end</h4>
+                        <p class="timeline__desc">
+                            Atuação em múltiplos projetos de clientes, oferecendo suporte de desenvolvimento, correção
+                            de bugs, adaptações e implementação de novas features.
+                        </p>
+                        <p class="timeline__desc">
+                            Desenvolvimento e manutenção de integrações back-end em Golang entre Content Management
+                            Systems (CMS) e plataformas de publicidade programática (DSPs/SSPs), com foco em APIs REST,
+                            modelagem de dados e comunicação eficiente entre sistemas em ambiente de produção.
+                        </p>
+                        <div class="flex flex-wrap gap-sm" style="margin-top:var(--space-md);">
+                            <span class="tag">Golang</span>
+                            <span class="tag">APIs REST</span>
+                            <span class="tag">Modelagem de Dados</span>
+                            <span class="tag">Comunicação entre sistemas</span>
+                            <span class="tag">Ambiente de produção</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Inviron Technologies -->
-                <div class="relative animate-on-scroll">
-                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 -mt-2 w-5 h-5 rounded-full border-4 border-lime-green bg-dark-800"></div>
-                    <div class="md:w-5/12 md:mr-auto md:pr-8">
-                        <div class="card">
-                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                                <h3 class="text-xl font-bold text-lime-green">Inviron Technologies S/A</h3>
-                                <span class="bg-dark-600 text-light-200 px-3 py-1 rounded-full text-sm mt-2 md:mt-0">02/2024 - 09/2024</span>
-                            </div>
-                            <h4 class="text-lg font-medium mb-4">Estagiario de Operações e Help Desk</h4>
-                            <p class="text-light-300">
-                                Atuação nas áreas operacionais e Help Desk com resolução de problemas técnicos e suporte a sistemas.
-                            </p>
+                <div class="timeline__item reveal">
+                    <div class="timeline__node"></div>
+                    <div class="timeline__card">
+                        <div class="timeline__header">
+                            <h3 class="timeline__company gradient-text">Inviron Technologies S/A</h3>
+                            <span class="timeline__period">02/2024 - 09/2024</span>
                         </div>
+                        <h4 class="timeline__role">Estagiário de Operações e Help Desk</h4>
+                        <p class="timeline__desc">
+                            Atuação nas áreas operacionais e Help Desk com resolução de problemas técnicos e suporte a
+                            sistemas.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projetos Section -->
-    <section id="projetos" class="section bg-dark-900">
-        <div class="container-custom">
-            <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Projetos <span class="text-lime-green">Relevantes</span></h2>
-                <div class="w-20 h-1 bg-lime-green mx-auto mb-8"></div>
+    <!-- ======== PROJETOS ======== -->
+    <section id="projetos" class="section">
+        <div class="container">
+            <div class="section__header reveal">
+                <h2 class="section__title">Projetos <span class="gradient-text">Relevantes</span></h2>
+                <div class="section__divider"></div>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="grid-3 stagger-children">
                 <!-- Care Plus API -->
-                <a class="card group hover:border-lime-green transition-all duration-300 animate-on-scroll" target="_blank" href="https://github.com/SgT012003/Challeng-Csharp">
-                    <div class="bg-dark-600 rounded-lg h-48 mb-6 flex items-center justify-center overflow-hidden">
-                        <span class="material-icons text-lime-green text-6xl">emoji_events</span>
+                <a class="project-card reveal" target="_blank" href="https://github.com/SgT012003/Challeng-Csharp">
+                    <div class="project-card__visual">
+                        <span class="material-icons">emoji_events</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-lime-green transition-colors">Care Plus API</h3>
-                    <p class="text-light-300 mb-4">
-                        API RESTful completa em ASP.NET Core 8.0 para gamificação de bem-estar. Arquitetura em camadas com princípios SOLID, Entity Framework Core, Docker e seeding automático.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">C#</span>
-                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">ASP.NET Core</span>
-                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">Docker</span>
-                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">SOLID</span>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Care Plus API</h3>
+                        <p class="project-card__desc">
+                            API RESTful completa em ASP.NET Core 8.0 para gamificação de bem-estar. Arquitetura em
+                            camadas com princípios SOLID, Entity Framework Core, Docker e seeding automático.
+                        </p>
+                        <div class="project-card__tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">ASP.NET Core</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">SOLID</span>
+                        </div>
                     </div>
                 </a>
-                
+
                 <!-- Upskilling API -->
-                <a class="card group hover:border-lime-green transition-all duration-300 animate-on-scroll" target="_blank" href="https://github.com/SgT012003/SOA-GS1">
-                    <div class="bg-dark-600 rounded-lg h-48 mb-6 flex items-center justify-center overflow-hidden">
-                        <span class="material-icons text-lime-green text-6xl">school</span>
+                <a class="project-card reveal" target="_blank" href="https://github.com/SgT012003/SOA-GS1">
+                    <div class="project-card__visual">
+                        <span class="material-icons">school</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-lime-green transition-colors">Plataforma de Upskilling</h3>
-                    <p class="text-light-300 mb-4">
-                        API RESTful em Golang com Gin-Gonic para plataforma de aprimoramento profissional. Gestão de usuários, trilhas e matrículas com PostgreSQL, Docker e Swagger.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">Golang</span>
-                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">Gin-Gonic</span>
-                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">PostgreSQL</span>
-                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">Docker</span>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Plataforma de Upskilling</h3>
+                        <p class="project-card__desc">
+                            API RESTful em Golang com Gin-Gonic para plataforma de aprimoramento profissional. Gestão de
+                            usuários, trilhas e matrículas com PostgreSQL, Docker e Swagger.
+                        </p>
+                        <div class="project-card__tags">
+                            <span class="tag">Golang</span>
+                            <span class="tag">Gin-Gonic</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Docker</span>
+                        </div>
                     </div>
                 </a>
-                
+
                 <!-- Sistema de Monitorização -->
-                <a class="card group hover:border-lime-green transition-all duration-300 animate-on-scroll" target="_blank" href="https://github.com/FIAP-ESPR/GS-Dynamic">
-                    <div class="bg-dark-600 rounded-lg h-48 mb-6 flex items-center justify-center overflow-hidden">
-                        <span class="material-icons text-lime-green text-6xl">local_fire_department</span>
+                <a class="project-card reveal" target="_blank" href="https://github.com/FIAP-ESPR/GS-Dynamic">
+                    <div class="project-card__visual">
+                        <span class="material-icons">local_fire_department</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-lime-green transition-colors">Monitorização de Risco de Incêndio</h3>
-                    <p class="text-light-300 mb-4">
-                        Aplicação web em Flask que integra APIs OpenWeather e Google Maps para análise de risco de incêndios. Uso de grafos, algoritmo de Dijkstra e visualizações interativas.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">Python</span>
-                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">Flask</span>
-                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">NetworkX</span>
-                        <span class="bg-dark-600 text-light-200 px-2 py-1 rounded text-xs">APIs REST</span>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Monitorização de Risco de Incêndio</h3>
+                        <p class="project-card__desc">
+                            Aplicação web em Flask que integra APIs OpenWeather e Google Maps para análise de risco de
+                            incêndios. Uso de grafos, algoritmo de Dijkstra e visualizações interativas.
+                        </p>
+                        <div class="project-card__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">NetworkX</span>
+                            <span class="tag">APIs REST</span>
+                        </div>
                     </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Formação Section -->
-    <section id="formacao" class="section bg-dark-800">
-        <div class="container-custom">
-            <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Formação <span class="text-lime-green">Acadêmica</span></h2>
-                <div class="w-20 h-1 bg-lime-green mx-auto mb-8"></div>
+    <!-- ======== FORMAÇÃO ======== -->
+    <section id="formacao" class="section section--alt">
+        <div class="container">
+            <div class="section__header reveal">
+                <h2 class="section__title">Formação <span class="gradient-text">Acadêmica</span></h2>
+                <div class="section__divider"></div>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Formação Acadêmica -->
-                <div class="card animate-on-scroll">
-                    <div class="flex items-center mb-6">
-                        <span class="material-icons text-lime-green text-3xl mr-4">school</span>
-                        <h3 class="text-xl font-bold">Educação Formal</h3>
+
+            <div class="grid-2">
+                <!-- Educação Formal -->
+                <div class="card reveal">
+                    <div class="education__icon-header">
+                        <span class="material-icons">school</span>
+                        <h3>Educação Formal</h3>
                     </div>
-                    
-                    <div class="mb-8">
-                        <h4 class="text-lg font-medium mb-2">Engenharia de Software</h4>
-                        <p class="text-light-300 mb-1">FIAP - <span id="current-semester">0º</span> / 10 semestre</p>
-                        <p class="text-light-300">Previsão de Conclusão: Julho/2027</p>
-                        
-                        <div class="mt-4 bg-dark-600 rounded-full h-4 overflow-hidden">
-                            <div id="progress-bar" class="bg-lime-green h-full" style="width: 0%"></div>
-                        </div>
-                        <div class="flex justify-between mt-1 text-xs text-light-300">
-                            <span>Início</span>
-                            <div>
-                                <span id="progress-percentage">0</span><span>% Concluído</span>
+
+                    <div>
+                        <h4 style="font-size:1.1rem;margin-bottom:0.5rem;">Engenharia de Software</h4>
+                        <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:0.25rem;">FIAP - <span
+                                id="current-semester">0º</span> / 8 semestre</p>
+                        <p style="color:var(--text-secondary);font-size:0.95rem;">Previsão de Conclusão: Julho/2027</p>
+
+                        <div class="progress-wrap">
+                            <div class="progress-bar">
+                                <div id="progress-bar" class="progress-bar__fill" style="width:0%"></div>
                             </div>
-                            <span>Conclusão</span>
+                            <div class="progress-info">
+                                <span>Início</span>
+                                <span><span id="progress-percentage">0</span>% Concluído</span>
+                                <span>Conclusão</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Certificações e Cursos -->
-                <div class="card animate-on-scroll">
-                    <div class="flex items-center mb-6">
-                        <span class="material-icons text-lime-green text-3xl mr-4">workspace_premium</span>
-                        <h3 class="text-xl font-bold">Certificações e Cursos</h3>
+
+                <!-- Certificações -->
+                <div class="card reveal" style="transition-delay:0.1s;">
+                    <div class="education__icon-header">
+                        <span class="material-icons">workspace_premium</span>
+                        <h3>Certificações e Cursos</h3>
                     </div>
-                    
-                    <ul class="space-y-4">
-                        <li>
-                            <div class="flex items-start">
-                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
-                                <div>
-                                    <h4 class="font-medium">OSWP (PEN-210) - On Going</h4>
-                                    <p class="text-light-300 text-sm">Offensive Security</p>
-                                </div>
+
+                    <ul class="cert-list">
+                        <li class="cert-item">
+                            <span class="material-icons">arrow_right</span>
+                            <div>
+                                <h4>OSWP (PEN-210) - On Going</h4>
+                                <p>Offensive Security</p>
                             </div>
                         </li>
-                        <li>
-                            <div class="flex items-start">
-                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
-                                <div>
-                                    <h4 class="font-medium">Cyber Security</h4>
-                                    <p class="text-light-300 text-sm">HackerSec (12 meses)</p>
-                                </div>
+                        <li class="cert-item">
+                            <span class="material-icons">arrow_right</span>
+                            <div>
+                                <h4>Cyber Security</h4>
+                                <p>HackerSec (12 meses)</p>
                             </div>
                         </li>
-                        <li>
-                            <div class="flex items-start">
-                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
-                                <div>
-                                    <h4 class="font-medium">SAP ERP</h4>
-                                    <p class="text-light-300 text-sm">GACINTY University (8 meses)</p>
-                                </div>
+                        <li class="cert-item">
+                            <span class="material-icons">arrow_right</span>
+                            <div>
+                                <h4>SAP ERP</h4>
+                                <p>GACINTY University (8 meses)</p>
                             </div>
                         </li>
-                        <li>
-                            <div class="flex items-start">
-                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
-                                <div>
-                                    <h4 class="font-medium">Administração de Pequenas e Médias Empresas</h4>
-                                    <p class="text-light-300 text-sm">SENAC</p>
-                                </div>
+                        <li class="cert-item">
+                            <span class="material-icons">arrow_right</span>
+                            <div>
+                                <h4>Administração de Pequenas e Médias Empresas</h4>
+                                <p>SENAC</p>
                             </div>
                         </li>
-                        <li>
-                            <div class="flex items-start">
-                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
-                                <div>
-                                    <h4 class="font-medium">Design Thinking</h4>
-                                    <p class="text-light-300 text-sm">FIAP</p>
-                                </div>
+                        <li class="cert-item">
+                            <span class="material-icons">arrow_right</span>
+                            <div>
+                                <h4>Design Thinking</h4>
+                                <p>FIAP</p>
                             </div>
                         </li>
-                        <li>
-                            <div class="flex items-start">
-                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
-                                <div>
-                                    <h4 class="font-medium">Gestão em Infraestrutura de TI</h4>
-                                    <p class="text-light-300 text-sm">FIAP</p>
-                                </div>
+                        <li class="cert-item">
+                            <span class="material-icons">arrow_right</span>
+                            <div>
+                                <h4>Gestão em Infraestrutura de TI</h4>
+                                <p>FIAP</p>
                             </div>
                         </li>
-                        <li>
-                            <div class="flex items-start">
-                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
-                                <div>
-                                    <h4 class="font-medium">Códigos de Alta Performance</h4>
-                                    <p class="text-light-300 text-sm">FIAP</p>
-                                </div>
+                        <li class="cert-item">
+                            <span class="material-icons">arrow_right</span>
+                            <div>
+                                <h4>Códigos de Alta Performance</h4>
+                                <p>FIAP</p>
                             </div>
                         </li>
-                        <li>
-                            <div class="flex items-start">
-                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
-                                <div>
-                                    <h4 class="font-medium">Desenvolvimento em .NET</h4>
-                                    <p class="text-light-300 text-sm">FIAP</p>
-                                </div>
+                        <li class="cert-item">
+                            <span class="material-icons">arrow_right</span>
+                            <div>
+                                <h4>Desenvolvimento em .NET</h4>
+                                <p>FIAP</p>
                             </div>
                         </li>
-                        <li>
-                            <div class="flex items-start">
-                                <span class="material-icons text-lime-green mr-2 mt-1 text-sm">arrow_right</span>
-                                <div>
-                                    <h4 class="font-medium">Formação Social e Sustentabilidade</h4>
-                                    <p class="text-light-300 text-sm">FIAP</p>
-                                </div>
+                        <li class="cert-item">
+                            <span class="material-icons">arrow_right</span>
+                            <div>
+                                <h4>Formação Social e Sustentabilidade</h4>
+                                <p>FIAP</p>
                             </div>
                         </li>
                     </ul>
@@ -628,57 +607,55 @@
         </div>
     </section>
 
-    <!-- Contato Section -->
-    <section id="contato" class="section bg-dark-900">
-        <div class="container-custom">
-            <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em <span class="text-lime-green">Contato</span></h2>
-                <div class="w-20 h-1 bg-lime-green mx-auto mb-8"></div>
-                <p class="text-lg text-light-300">
-                    Estou disponível para novas oportunidades e colaborações. Entre em contato através dos canais abaixo.
+    <!-- ======== CONTATO ======== -->
+    <section id="contato" class="section">
+        <div class="container">
+            <div class="section__header reveal">
+                <h2 class="section__title">Entre em <span class="gradient-text">Contato</span></h2>
+                <div class="section__divider"></div>
+                <p style="color:var(--text-secondary);font-size:1.05rem;max-width:500px;margin:var(--space-lg) auto 0;">
+                    Estou disponível para novas oportunidades e colaborações. Entre em contato através dos canais
+                    abaixo.
                 </p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <!-- Email -->
-                <a href="mailto:victor.didoff2003@gmail.com" class="card flex flex-col items-center text-center hover:border-lime-green transition-all duration-300 animate-on-scroll">
-                    <span class="material-icons text-lime-green text-4xl mb-4">email</span>
-                    <h3 class="text-xl font-bold mb-2">Email</h3>
-                    <p class="text-light-300">victor.didoff2003@gmail.com</p>
+
+            <div class="contact-grid stagger-children">
+                <a href="mailto:victor.didoff2003@gmail.com" class="contact-card reveal">
+                    <span class="material-icons contact-card__icon">email</span>
+                    <h3>Email</h3>
+                    <p>victor.didoff2003@gmail.com</p>
                 </a>
-                
-                <!-- Telefone -->
-                <a href="tel:+5511985557790" class="card flex flex-col items-center text-center hover:border-lime-green transition-all duration-300 animate-on-scroll">
-                    <span class="material-icons text-lime-green text-4xl mb-4">phone</span>
-                    <h3 class="text-xl font-bold mb-2">Telefone</h3>
-                    <p class="text-light-300">(11) 98555-7790</p>
+
+                <a href="tel:+5511985557790" class="contact-card reveal">
+                    <span class="material-icons contact-card__icon">phone</span>
+                    <h3>Telefone</h3>
+                    <p>(11) 98555-7790</p>
                 </a>
-                
-                <!-- LinkedIn -->
-                <a href="http://linkedin.com/in/victor-didoff-32979b226/" target="_blank" class="card flex flex-col items-center text-center hover:border-lime-green transition-all duration-300 animate-on-scroll">
-                    <span class="material-icons text-lime-green text-4xl mb-4">link</span>
-                    <h3 class="text-xl font-bold mb-2">LinkedIn</h3>
-                    <p class="text-light-300">linkedin.com/in/victor-didoff-32979b226</p>
+
+                <a href="http://linkedin.com/in/victor-didoff-32979b226/" target="_blank" class="contact-card reveal">
+                    <span class="material-icons contact-card__icon">link</span>
+                    <h3>LinkedIn</h3>
+                    <p>linkedin.com/in/victor-didoff</p>
                 </a>
             </div>
-            
-            <div class="text-center animate-on-scroll">
-                <a href="assets/Curriculo_Victor_Didoff.pdf" download class="btn btn-primary inline-flex items-center">
-                    <span class="material-icons mr-2">download</span> Baixar Currículo Completo
+
+            <div class="text-center reveal" style="margin-top:var(--space-3xl);">
+                <a href="assets/Curriculo_Victor_Didoff.pdf" download class="btn btn--primary">
+                    <span class="material-icons">download</span> Baixar Currículo Completo
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-8 bg-dark-800 border-t border-dark-600">
-        <div class="container-custom">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <a href="#" class="text-xl font-poppins font-bold text-lime-green">Victor<span class="text-light-100">.dev</span></a>
-                </div>
-                <div class="text-light-300 text-sm">
-                    &copy; <span id="current-year">1998</span> Victor Didoff. Todos os direitos reservados.
+    <!-- ======== FOOTER ======== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="#" class="header__logo">
+                    <span class="accent">Victor</span><span class="dot">.</span><span>dev</span>
+                </a>
+                <div class="footer__copy">
+                    &copy; <span id="current-year">2026</span> Victor Didoff. Todos os direitos reservados.
                 </div>
             </div>
         </div>
@@ -686,5 +663,5 @@
 
     <script src="js/main.js"></script>
 </body>
-</html>
 
+</html>
